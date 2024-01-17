@@ -1,0 +1,13 @@
+{% if tool_list %}
+  {%for tool in tool_list%}
+  <li>
+    <a class='tool-name' href={% url 'tool:detail' pk=tool.id %}>{{tool.name}}</a>
+    <span class='tool-type'>{{tool.type}}</span>
+    <span class='tool-desc'>{{tool.desc}}</span>
+  </li>
+  {% endfor %}
+  {% else %}
+  <li>
+    <span>개발툴이 없습니다.</span>
+  </li>
+{% endif %}

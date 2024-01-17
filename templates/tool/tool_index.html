@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class='search-bar-wrapper'>
+  <input type='text' id='search-bar' value="{{keyword|default_if_none:'' }}"/>
+  <button id='search-btn'>검색</button>
+</section>
+<ul id="search-container">
+  {% include 'tool/tool_list.html' %}
+</ul>
+<form id='search-form' method='get' action='{% url "tool:index" %}'>
+  <input type='hidden' id='keyword-input' name='keyword' value="{{ keyword|default_if_none:''}}"/>
+</form>
+<script src="{% static 'tool/js/tool.js' %}" defer></script>
+{% endblock %}

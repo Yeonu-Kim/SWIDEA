@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class='create-form'>
+    <div class='create-form-desc'>
+        <h3>Idea Detail Update</h3>
+        <span>아이디어 세부내용 수정 페이지입니다. 아이디어를 구체화하거나 내용을 변경해 보아요.</span>
+    </div>
+    <div class='create-form-input'>
+        <form method="post" ENCTYPE='multipart/form-data'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

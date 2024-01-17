@@ -1,0 +1,14 @@
+.tool-contents-container, .tool-idea-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px;
+    gap: 16px;
+}
+
+.tool-idea-container {
+    border-top: 1px solid var(--green);
+}
+
+.tool-idea:hover {
+    color: var(--green);
+}

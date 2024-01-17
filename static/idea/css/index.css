@@ -1,0 +1,114 @@
+.sort-container{
+    display: flex;
+    justify-content: end;
+    padding: 10px 60px;
+}
+
+.idea-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px 60px;
+}
+
+.idea-card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    background-color: var(--bg-gray);
+}
+
+.idea-card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.idea-card:hover {
+    position: relative;
+    top: -5px;
+}
+.idea-card-image {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.idea-card-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.idea-card-title {
+    font-size: 3.2rem;
+}
+
+.idea-card-title:hover {
+    color: var(--green);
+}
+.interest-container {
+    display: inline-flex;
+    gap: 16px;
+    font-size: 2.4rem;
+}
+
+.interest-container > span {
+    width: 4rem;
+    height: 4rem;
+    padding: 10px;
+    text-align: center;
+}
+.plus-button, .minus-button {
+    cursor: pointer;
+    border: 1px solid var(--bg-5);
+    border-radius: 50%;
+}
+.plus-button:hover, .minus-button:hover {
+    border: none;
+    background-color: var(--green);
+    color: black;
+}
+
+.pick-btn {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.yellow-star {
+    background-size: 24px 24px;
+    background-image: url('/static/idea/image/yellow-star.png')
+}
+
+.black-star {
+    background-size: 24px 24px;
+    background-image: url('/static/idea/image/black-star.png')
+}
+
+.idea-page {
+    display: flex;
+    justify-content: center;
+    padding: 10px 60px;
+    margin-bottom: 60px;
+    gap: 10px;
+}
+
+.idea-page > li {
+    display: inline;
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.idea-page > li:hover, .idea-page .current-page {
+    background-color: var(--green);
+    color: black;
+}

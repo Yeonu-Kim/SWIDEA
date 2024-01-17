@@ -1,0 +1,50 @@
+.create-form {
+    padding: 20px 60px;
+}
+
+.create-form-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.create-form-desc > h3 {
+    font-size: 2.4rem;
+    color: var(--green)
+}
+
+.create-form-input > form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create-form-input > form > button {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+}
+
+button {
+    border: 1px solid var(--green);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--green)
+}
+
+button:hover {
+    background-color: var(--green);
+    color: black;
+}
+
+.detail-button-container{
+    display: flex;
+    gap: 16px;
+}
+.detail-button-container > a{
+    border: 1px solid var(--green);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--green)
+}

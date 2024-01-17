@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html {
+    font-size: 62.5%;
+    line-height: 1;
+  }
+  
+  body {
+    width: 720px;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    font-family: "NEXON Lv1 Gothic OTF", -apple-system, BlinkMacSystemFont,
+      system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+      "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol", sans-serif;
+  }
+
+  nav {
+    display: flex;
+    padding: 40px 60px;
+    margin: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--bg-gray);
+  }
+
+  .nav-logo:hover, .right-nav > a:hover {
+    color: var(--green);
+  }
+
+  .right-nav {
+    display: flex;
+    gap: 15px;
+  }
+
+  select {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    color: #444;
+    background-color: #fff;
+    
+    padding: .6em 1.4em .5em .8em;
+    margin: 0;
+    
+    border: 1px solid #aaa;
+    border-radius: .5em;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+}
+
+select:hover {
+    border-color: #888;
+  }
+  
+select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+}
+
+.errorlist{
+  color: yellow;
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class='sort-container'>
+  <form id='sort-form' method='get' action='{% url "idea:index %"}' value='{{order|default_if_none:""}}'>
+    <select id='sort-select' name='order'>
+      <option>--정렬기준--</option>
+      <option value='pick'>찜하기순</option>
+      <option value='name'>제목순</option>
+      <option value='interest'>관심도순</option>
+      <option value='id'>등록순</option>
+      <option value='time'>최신순</option>
+    </select>
+  </form>
+</section>
+<div id='idea-container'>
+  {% include 'idea/idea_list.html' %}
+</div>
+<script src="{% static 'idea/js/idea.js' %}" defer></script>
+{% endblock %}

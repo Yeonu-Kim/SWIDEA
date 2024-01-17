@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>my SW IDEA site</title>
+    <link href={% static 'idea/css/variables.css' %} rel='stylesheet'/>
+    <link href={% static 'idea/css/reset.css' %} rel='stylesheet'/>
+    <link href={% static 'idea/css/global.css' %} rel='stylesheet'/>
+    <link href={% static 'idea/css/index.css' %} rel='stylesheet'/>
+    <link href={% static 'idea/css/form.css' %} rel='stylesheet'/>
+    <link href={% static 'idea/css/detail.css' %} rel='stylesheet'/>
+    <link href={% static 'tool/css/index.css' %} rel='stylesheet'/>
+    <link href={% static 'tool/css/detail.css' %} rel='stylesheet'/>
+  </head>
+  <body>
+    {% include 'navbar.html'%}
+    <!-- 기본 템플릿 안에 삽입될 내용 Start -->
+    {% block content %}
+    {% endblock %}
+    <!-- 기본 템플릿 안에 삽입될 내용 End -->
+  </body>
+</html>

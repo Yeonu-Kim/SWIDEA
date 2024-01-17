@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class='idea-detail-container'>
+    <div class='idea-image-container'>
+        {% if idea.image %}
+        <img src="{{idea.image.url}}"/>
+          {% else %}
+          <img src={% static 'idea/image/no_img.png' %}/>
+          {% endif %}
+    </div>
+    <ul class='idea-contents-container'>
+        <li><span>아이디어명: {{ idea.title }}</span></li>
+        <li><span>내용: {{ idea.content }}</span></li>
+        <li><span>관심도: {{ idea.interest }}</span></li>
+    </ul>
+</section>
+<section class='idea-devtool-container'>
+    <span>사용하는 개발툴</span>
+    <a href={% url 'tool:detail' pk=idea.devtool.id %}>{{idea.devtool}}</a>
+</section>
+<section class='detail-button-container'>
+    <a href={% url 'idea:modify' pk=idea.id %} method='post'>수정</a>
+    <a href={% url 'idea:index' %}>목록</a>
+    <form action={% url 'idea:delete' pk=idea.id %} method="post">
+        {% csrf_token %}
+        <button>삭제</button>
+    </form>
+</section>
+{% endblock %}

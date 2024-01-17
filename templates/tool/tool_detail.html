@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+    <ul class='tool-contents-container'>
+        <li><span>이름: {{ tool.name }}</span></li>
+        <li><span>종류: {{ tool.type }}</span></li>
+        <li><span>개발툴 설명: {{ tool.desc }}</span></li>
+    </ul>
+</section>
+<section class='tool-idea-container'>
+    <span>해당 개발툴을 사용하는 아이디어는?</span>
+    {% if idea_list %}
+        {% for idea in idea_list %}
+        <a class='tool-idea' href={% url 'idea:detail' pk=idea.id%}>{{idea.title}}</a>
+        {% endfor %}
+    {% else %}
+    <span>해당 개발툴을 사용하는 아이디어가 없습니다.</span>
+    {% endif %}
+</section>
+<section class='detail-button-container'>
+    <a href={% url 'tool:modify' pk=tool.id %} method='post'>수정</a>
+    <a href={% url 'tool:index' %}>목록</a>
+    <form action={% url 'tool:delete' pk=tool.id %} method="post">
+        {% csrf_token %}
+        <button>삭제</button>
+    </form>
+</section>
+{% endblock %}

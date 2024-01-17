@@ -1,0 +1,47 @@
+.search-bar-wrapper{
+  display: flex;
+  padding: 20px 60px;
+}
+#search-bar{
+  background-color: transparent;
+  display: inline-block;
+    width: 50%;
+    height: 20px;
+    padding: 20px 10px;
+    border: 3px solid var(--green);
+    border-radius: 5px ;
+    outline: none;
+    color: var(--green);
+  }
+  
+#search-bar:focus{
+  color: var(--green);
+}
+
+#search-container{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 60px;
+  gap: 24px;
+  color: var(--green);
+}
+
+#search-container > li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.tool-name {
+  font-size: 2.4rem;
+  color: var(--green);
+}
+.tool-name:hover {
+  color: white;
+}
+
+.tool-type {
+  color: white;
+}
+.tool-desc {
+  color: var(--bg-5)
+}

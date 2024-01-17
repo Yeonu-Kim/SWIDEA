@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class='create-form'>
+    <div class='create-form-desc'>
+        <h3>Idea Register</h3>
+        <span>아이디어 등록 페이지입니다. 당신의 아이디어를 잊지말고 기억하세요!</span>
+    </div>
+    <div class='create-form-input'>
+        <form method="post" ENCTYPE='multipart/form-data'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
